@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Comptible" content="ie=edge">
+    <link rel="stylesheet" href="css/loginpage.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login"> 
+        <h1>Login</h1>      
+        <form action="/validate" method="POST">
+            <p> <input type="text" id="username" name="username" placeholder="Username"required> </p>
+            <p> <input type="password" id="password" name="password" placeholder="Password" required> </p>
+            <p class="submit"><input type="submit" name="commit" value="Login"></p>
+            <p class="error"> 
+                <%if(typeof errormessage != "undefined"){%>
+                    <%= errormessage%> 
+             <% }  %>    
+            </p>
+        </form>
+</body>
+</html>

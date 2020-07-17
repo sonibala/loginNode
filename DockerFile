@@ -1,0 +1,17 @@
+FROM node:10.9.0
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY login.ejs ./
+COPY homepage.ejs ./
+COPY loginpage.css ./
+COPY homepage.css ./
+COPY server.js ./
+COPY passport-config.js ./
+
+
+EXPOSE 3000
+
+CMD [ "npm", "run", "devStart" ]
